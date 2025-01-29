@@ -26,7 +26,10 @@ using (var scope = app.Services.CreateScope())
 
 }
 
-// Configure middleware
+// app.UseMiddleware<GlobalExceptionMiddleware>();
+app.UseDefaultExceptionHandler();
+
+// Configure middleware                 
 app.UseFastEndpoints();
 
 // Run the application
